@@ -1,0 +1,19 @@
+name = "cf-ai-edge-chat-memory"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "SESSION"
+class_name = "Session"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["Session"]
+
+# Uncomment if you want to persist logs or use KV (not required for this demo)
+# [[kv_namespaces]]
+# binding = "CHAT_KV"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
